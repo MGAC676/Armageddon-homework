@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "scorpion-king64",
+  "private_key_id": "4abdfcd89b39e800d546854a8230a4560d96f101",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCplPMWqSeMo7rL\nyunC9isLGo3rwoDOOqoz3oTV0ZDbJzf11gd3TQ3erCuHz38xl6FLzgx4ORgmSffZ\nklrIdbCBqXeLyL7XyntH142dl9HbBbgaDuYf7hOschz7pIBrVFrBNFccbzrEZhrI\naT9pgQq99yxCM9M4bXrlFISsSHeCT3NCe7sWOS426F5g9IgeyhgCe3HPbv/4XKHb\nu868o2m62KtszXc7xU+pwTkm4On6ta+ALpZKXJNeTQIaPnZdW8ivqoYkxvP7vZ+C\nzAgklLObxJI+12b34r6Tl3ZJU/s+P98g+XnEfpblgyaFnN44T0kJJmjTZwGR25xe\nONEA4IAzAgMBAAECggEASZE7j9YcOTACZkyF8rU2YR/I98EufckHc28SM2wxqlEu\nPrD2FjRQUwxf6hADPvFn4OnnkPQ73Mh0BGgwiAw+YVGycerJl/XYW4dQgVCOkrS9\ndFiITsvKryHmHujzaRx0LqLVM5mxZehhsBWwk8WOcnDbO3EeLbmY+e5XzCG37shx\nGlik0Mbah2MioJg5F1NbpudD0T6S84p5JxXAf3PRD0Iqw8J0ffcy9dcq/sL+coB/\nrdp2hDSXGrjjDBe6CqXn5SGyrWFR1pVlr0fRM1+EOckSH7vHENgI1c+SOsv4AHcE\nAhjMeXQrCoDDcmt5ZOATK+9GuORzcNltGmWEgUD9cQKBgQDnBeX0JtU0DeNbwLEw\n1p/reRwp10CYBoO+nxEK+QX6om7uEAwKka/gaKjwpJNAFLDKlbZ84Nn2gEUCVc9e\nx4xef6QCWPifsDjTtPGKVgJkva5yzswMke+sLteEo6/lOWw3/pwxm2cBXoLKEvPH\nb874+LTRRmhuukOssERkmfzqaQKBgQC76oXGawfsho8N63fLJxjZmJcS8qPfsPe9\nLhJvOKiRT5SALddmzs5NN8PqMvU9cBKmrOD1odlP3C95z6oPTpGq79Z4R2qa7N0n\nB3VMGgnqS9h7APNitmts9bJWkDxuSuy8Bemk4lJniVy+yB7gFpT31Nl6KMsjZx0Q\niaKRD29qOwKBgQCMmQVa8qs8k9szwvDThTssZreiKzNPkl9piosnv2hJIcQbND7v\ny7xa+bcfRTmsfSsfD8BQ/dMI9wWIp0qeJxmhhVL+bsFZBjl/dpatlyy7vMjHbF24\npLRVeOiG+8uX2Luo1FagxjAJIEi+zIv6a2xuD4aT+qKiCNAY7+mfxCutSQKBgGVt\nDulqqas7cYk018K6Boqj9p7Ogi7hiMX+UQrhDPLpfiC1HXcrFmTNPZxyBrYzgI2f\n8AgEZJPbJ3Da6lI6uRsHOr5O5bZbNH61YtVBlKp2Z5D0kWltRoxYDPr1/PgWzrIp\nitNpKMsjdACxaSDQb3VY2E08KXChXimn8CvVpfAzAoGBAIA1KD0C0w/xLLYZ89OV\n80S8KX9hQaoJVkSqCrG7iE1kzNMaE36DX6R/8mrAwoFj45vRSkiobdoq0jOampcb\nqe1e8e1iV+wjuOtd+TbyTvqFlWpTAp/bXfm/L7ZuX68HOyF0EvzzPm+UlUPNVUPy\ndxjGUFfjdV1ZPqARb0ivHdJt\n-----END PRIVATE KEY-----\n",
+  "client_email": "scorpion-king64@scorpion-king64.iam.gserviceaccount.com",
+  "client_id": "107702493230770583589",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/scorpion-king64%40scorpion-king64.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

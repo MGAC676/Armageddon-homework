@@ -1,0 +1,112 @@
+variable "project_id" {
+  type        = string
+  description = "The project ID to deploy resources"
+  default     = "vanguard64"
+}
+
+variable "region" {
+  type        = string
+  description = "The region to deploy resources"
+  default     = "us-east1"
+}
+
+variable "zone" {
+  type        = string
+  description = "The zone to deploy resources"
+  default     = "us-east1-b"
+}
+
+variable "credentials" {
+  type        = string
+  description = "The path to the service account key file"
+  default     = "vanguard64-90e820b8b1e4.json"
+}
+
+variable "location" {
+  type        = string
+  description = "The location to deploy resources"
+  default     = "US"
+}
+
+variable "google_bucket_url" {
+  type        = string
+  description = "Google storage bucket URL"
+  default     = "https://storage.googleapis.com/"
+}
+
+variable "instance_name" {
+  type        = string
+  description = "The name of the instance"
+  default     = "armageddon-22"
+}
+
+variable "machine_type" {
+  type        = string
+  description = "The machine type of the instance"
+  default     = "e2-medium"
+}
+
+variable "network_name" {
+  type        = string
+  description = "The name of the network"
+  default     = "vanguard64-network"
+}
+
+variable "subnet_name" {
+  type        = string
+  description = "The name of the subnet"
+  default     = "vanguard64-subnet"
+}
+
+variable "ip_cidr_range" {
+  type        = string
+  description = "The IP CIDR range of the subnet"
+  default     = "10.195.0.0/24"
+
+}
+
+variable "firewall_name" {
+  type        = string
+  description = "The name of the firewall rule"
+  default     = "firewall-rule"
+}
+
+variable "ports" {
+  type        = list(number)
+  description = "The ports to open on the firewall rule"
+  default     = ["22", "80", "443"]
+}
+
+variable "source_ranges" {
+  type        = list(string)
+  description = "The source ranges to allow traffic from"
+  default     = ["0.0.0.0/0"]
+}
+
+variable "google_compute_network" {
+  type        = string
+  description = "The name of the network"
+  default     = "main-network"
+
+}
+
+# variable "google_compute_network_two" {
+#   type        = string
+#   description = "The name of the network"
+#   default     = "vanguard64-network-two"
+
+# }
+
+# variable "google_compute_network_three" {
+#   type        = string
+#   description = "The name of the network"
+#   default     = "vanguard64-network-three"
+
+# }
+
+variable "google_compute_instance" {
+  type        = string
+  description = "The name of the instance"
+  default     = "armageddon-22"
+}
+

@@ -1,0 +1,52 @@
+# Create a Google VPC 
+resource "google_compute_network" "vanguard64_network_three" {
+  project                 = var.project_id
+  name                    = var.network_name
+  auto_create_subnetworks = false
+  mtu                     = 1460
+}
+
+# resource "google_compute_network" "vanguard64" {
+#   name                    = var.google_compute_network
+#   auto_create_subnetworks = false
+# }
+
+resource "google_compute_network" "main-network" {
+  name                    = "main-network"
+  auto_create_subnetworks = false
+}
+
+
+# add subnet to the VPC
+resource "google_compute_subnetwork" "vanguard64_subnet" {
+  name          = var.subnet_name
+  ip_cidr_range = var.ip_cidr_range
+  region        = var.region
+  network       = google_compute_network.vanguard64_network_three.self_link
+}
+
+
+# resource "google_compute_network" "logun55-network" {
+#   name                    = var.google_compute_network
+#   auto_create_subnetworks = false
+# }
+
+
+
+# firewall rule to allow traffic on port 80
+resource "google_compute_firewall" "rules" {
+  name    = var.firewall_name
+  network = google_compute_network.vanguard64_network_three.id
+
+  allow {
+    protocol = "tcp"
+    ports    = var.ports
+  }
+
+  allow {
+    protocol = "icmp"
+  }
+
+  source_ranges = var.source_ranges
+  priority      = 1000
+}
