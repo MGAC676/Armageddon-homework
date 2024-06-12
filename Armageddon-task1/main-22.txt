@@ -1,0 +1,128 @@
+terraform {
+  required_providers {
+    google = {
+      source  = "hashicorp/google"
+      version = "5.25.0"
+    }
+  }
+}
+
+provider "google" {
+  # Configuration options
+  region      = "asia-northeast1"
+  project     = "project-voltron64"
+  zone        = "asia-northeast1-a"
+  credentials = "project-voltron64-2532752aca0d.json"
+
+}
+
+resource "google_storage_bucket" "armageddon-11" {
+  name          = "${var.project_id}-armageddon-11"
+  location      = var.location
+  force_destroy = true
+  website {
+    main_page_suffix = "index4.html"
+    not_found_page   = "404.html"
+  }
+
+
+  resource "google_storage_bucket_access_control" "public_rule" {
+    bucket = google_storage_bucket.task1.name
+    role   = "READER"
+    entity = "allUsers"
+  }
+
+
+  # Enable uniform bucket-level access
+  uniform_bucket_level_access = true
+  public_access_prevention    = "enforced"
+
+
+  versioning {
+    enabled = true
+  }
+
+
+}
+
+
+
+resource "google_compute_network" "auto-vpc-ft22" {
+  name                    = "auto-vpc-ft22"
+  auto_create_subnetworks = false
+}
+
+resource "google_compute_subnetwork" "auto-subnet-ft22" {
+  name          = "auto-subnet-ft22"
+  network       = google_compute_network.auto-vpc-ft22.id
+  ip_cidr_range = "10.87.1.0/24"
+  region        = "asia-northeast1"
+
+  # This ensures that the subnetwork deletion happens before any other resource creation or deletion
+  depends_on = [google_storage_bucket_object.picture]
+}
+
+
+
+output "auto" {
+  value = google_compute_network.auto-vpc-ft22.id
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#resource "google_compute_network" "custom-vpc-ft22" {
+#name = "custom-vpc-ft22"
+#auto_create_subnetworks = false
+#}
+
+
+
+#output "custom" {
+#  value = google_compute_network.custom-vpc-ft22.id
+#}
+
+/* 
+provider "google" {
+  credentials = file("<PATH_TO_YOUR_SERVICE_ACCOUNT_KEY>")
+  project     = "<YOUR_PROJECT_ID>"
+  region      = "us-central1"
+}
+
+resource "google_storage_bucket" "public_bucket" {
+  name     = "<YOUR_BUCKET_NAME>"
+  location = "US"
+
+  website {
+    main_page_suffix = "index.html"
+  }
+
+  cors {
+    origin          = ["*"]
+    method          = ["GET", "HEAD", "PUT", "POST", "DELETE"]
+    response_header = ["*"]
+    max_age_seconds = 3600
+  }
+}
+
+resource "google_storage_bucket_object" "public_object" {
+  name   = "index.html"
+  bucket = google_storage_bucket.public_bucket.name
+  source = "<PATH_TO_YOUR_INDEX_HTML>"
+}
+*/
