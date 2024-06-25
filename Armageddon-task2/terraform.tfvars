@@ -3,7 +3,7 @@
 project_id        = "put-your-project-id-here"
 region            = "us-east1"
 zone              = "us-east1-b"
-credentials       = "red-pill-production94-credentials.json"
+credentials       = "put-your-credentials-file-path-here.json"
 location          = "US"
 google_bucket_url = "https://storage.googleapis.com/"
 network_name      = "armageddon2-network"
