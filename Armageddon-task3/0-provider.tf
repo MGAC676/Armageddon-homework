@@ -14,3 +14,4 @@ provider "google" {
   zone        = var.zone
   credentials = var.credentials
 }
+

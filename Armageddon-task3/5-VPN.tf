@@ -147,3 +147,4 @@ resource "google_compute_forwarding_rule" "eu-udp-4500" {
   ip_address  = google_compute_address.eu-vpn-ip.address
   target      = google_compute_vpn_gateway.eu-vpn-gw.id
 }
+

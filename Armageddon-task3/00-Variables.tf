@@ -1,7 +1,7 @@
 variable "project_id" {
   type        = string
   description = "The project ID to deploy resources"
-  default     = "replace-me"
+  default     = "red-pill-production94"
 }
 
 variable "region" {
@@ -19,7 +19,7 @@ variable "zone" {
 variable "credentials" {
   type        = string
   description = "The path to the service account key file"
-  default     = "replace-me.json"
+  default     = "red-pill-production94-ef0be59ae9dd.json"
 }
 
 variable "location" {
@@ -38,6 +38,14 @@ variable "firewall_name" {
   type        = string
   description = "The name of the firewall rule"
   default     = "firewall-rule"
+  # default     = "allow-http"
+}
+
+variable "firewall_allow_http" {
+  type        = string
+  description = "The name of the firewall rule"
+  default     = "allow-http"
+
 }
 
 variable "source_ranges" {
@@ -47,11 +55,11 @@ variable "source_ranges" {
   default = ["0.0.0.0/0"]
 }
 
+
 variable "ports" {
   type        = list(string)
-  description = "Ports to open on the firewall"
-  # first array is for ingress, second array is for egress
-  default = ["22", "80", "3389"]
+  default     = ["80", "22", "3389"]
+  description = "value for the ports"
 }
 
 variable "us-vpc" {
@@ -63,7 +71,7 @@ variable "us-vpc" {
       firewall = "us-firewall"
     }
     us-east-subnet = {
-      instance-name = "us-east-vm"
+      instance-name = "us-east-instance"
       name          = "us-east-subnet"
       cidr          = "172.16.178.0/24"
       region        = "us-east1"
@@ -81,7 +89,7 @@ variable "eu-vpc" {
       firewall = "eu-firewall"
     }
     eu-subnet = {
-      instance-name = "eu-vm"
+      instance-name = "eu-instance"
       name          = "eu-subnet"
       cidr          = "10.178.0.0/24"
       region        = "europe-west1"
@@ -99,7 +107,7 @@ variable "us-west-vpc" {
       firewall = "us-west-firewall"
     }
     us-west-subnet = {
-      instance-name = "us-west-vm"
+      instance-name = "us-west-instance"
       name          = "us-west-subnet"
       cidr          = "172.16.179.0/24"
       region        = "us-west1"
@@ -119,7 +127,7 @@ variable "asia-vpc" {
       firewall = "asia-firewall"
     }
     asia-subnet = {
-      instance-name = "asia-vm"
+      instance-name = "asia-instance"
       name          = "asia-subnet"
       cidr          = "192.168.172.0/24"
       region        = "asia-southeast1"
