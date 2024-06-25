@@ -6,7 +6,7 @@
 variable "project_id" {
   type        = string
   description = "The project ID to deploy resources"
-  default     = "scorpion-king64"
+  default     = "put-your-project-id-here"
 }
 
 variable "region" {
@@ -24,7 +24,7 @@ variable "zone" {
 variable "credentials" {
   type        = string
   description = "The path to the service account key file"
-  default     = "scorpion-king64-4abdfcd89b39.json"
+  default     = "put-your-credentials-file-path-here.json"
 }
 
 variable "location" {
