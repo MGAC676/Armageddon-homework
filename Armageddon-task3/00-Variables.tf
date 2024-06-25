@@ -1,7 +1,7 @@
 variable "project_id" {
   type        = string
   description = "The project ID to deploy resources"
-  default     = "red-pill-production94"
+  default     = "put-your-project-id-here"
 }
 
 variable "region" {
@@ -19,7 +19,7 @@ variable "zone" {
 variable "credentials" {
   type        = string
   description = "The path to the service account key file"
-  default     = "red-pill-production94-ef0be59ae9dd.json"
+  default     = "put-your-credentials-file-path-here.json"
 }
 
 variable "location" {
